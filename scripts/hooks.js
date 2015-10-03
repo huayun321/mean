@@ -18,7 +18,7 @@ handler.on('push', function (event) {
         return;
     }
     console.log('Received a push on production, build started...');
-    exec('./scripts/deploy.sh', function(error, stdout, stderr) {
+    exec('./deploy.sh', function(error, stdout, stderr) {
         console.log(stdout);
         if(error != null) {
             console.log('error: ', error);
