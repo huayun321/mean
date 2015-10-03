@@ -9,5 +9,21 @@
     <p>Welcome to <%= title %></p>
     <h2>mean</h2>
     <h2>Start to pull! !!!!</h2>
+    <pre>
+      jsmith@local-host$ ssh-agent $SHELL
+jsmith@local-host$ ssh-add -L
+The agent has no identities.
+jsmith@local-host$ ssh-add
+Identity added: /home/jsmith/.ssh/id_rsa (/home/jsmith/.ssh/id_rsa)
+jsmith@local-host$ ssh-add -L
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsJIEILxftj8aSxMa3d8t6JvM79DyBV
+aHrtPhTYpq7kIEMUNzApnyxsHpH1tQ/Ow== /home/jsmith/.ssh/id_rsa
+jsmith@local-host$ ssh-copy-id -i remote-host
+jsmith@remote-host's password:
+Now try logging into the machine, with "ssh 'remote-host'", and check in:
+.ssh/authorized_keys
+to make sure we haven't added extra keys that you weren't expecting.
+[Note: This has added the key displayed by ssh-add -L]
+    </pre>
   </body>
 </html>
